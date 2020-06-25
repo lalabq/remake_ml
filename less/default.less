@@ -1,0 +1,87 @@
+// Cores
+@branco: #FFF;
+@amarelo: #fff159;
+@ocre: #E5D850;
+@azul: #3483FA;
+@azul_escuro: #1259c3;
+@verde: #39b54a;
+@preto: #000;
+@fonte_menu: #33333399;
+@cinza_escuro: #333333;
+@cinza_claro: #ebebeb;
+
+@width_max: 1180px;
+
+// Imagens
+@lupa: url('../image/icones/lupa.png');
+
+// Fontes
+@font-face {
+    font-family: "Manrope-Bold";
+    src: url("../fonts/Manrope-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Manrope-ExtraBold";
+    src: url("../fonts/Manrope-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Manrope-ExtraLight";
+    src: url("../fonts/Manrope-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Manrope-Light";
+    src: url("../fonts/Manrope-Light.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Manrope-Medium";
+    src: url("../fonts/Manrope-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Manrope-Regular";
+    src: url("../fonts/Manrope-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Manrope-SemiBold";
+    src: url("../fonts/Manrope-SemiBold.ttf") format("truetype");
+}
+
+// Media queries
+@mobile: ~"only screen and (max-width: 460px)";
+@not_mobile: ~"only screen and (min-width: 461px)";
+@desktop: ~"only screen and (min-width: 1024px)";
+@before_desktop: ~"only screen and (max-width: 1023px)";
+
+// Funções
+.generic-content-image (@url, @width, @height) {
+    background-image: @url;
+    background-repeat: no-repeat;
+    background-size: @width @height;
+    width: @width;
+    height: @height;
+    display: inline-block;
+    content: "";
+}
+.span-azul (@font_size, @padding) {
+    font-size: @font_size;
+    color: @branco;
+    background: @azul;
+    padding: @padding;
+    border-radius: 50px;
+    font-family: 'Manrope-Bold';
+}
+.seta-simples (@tamanho, @px, @color, @position: absolute, @background: transparent) {
+    content: "";
+    position: @position;
+    width: @tamanho;
+    height: @tamanho;
+    background: @background;
+    transform: rotate(45deg);
+    border-width: @px;
+    border-color: @color;
+    border-style: solid;
+}
+
+body {
+    margin: 0;
+    background: @cinza_claro;
+}
